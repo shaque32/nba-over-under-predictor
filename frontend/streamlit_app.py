@@ -14,7 +14,7 @@ if st.button("Get Prediction"):
         "rolling_pts_5": rolling_pts_5
     }
 
-    response = requests.post("http://127.0.0.1:8000/predict", json=payload)
+    response = requests.post("https://nba-over-under-predictor-1.onrender.com/predict", json=payload)
 
     if response.status_code == 200:
         result = response.json()
